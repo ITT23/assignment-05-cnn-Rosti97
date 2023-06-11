@@ -23,8 +23,9 @@ class GesturePredictor():
         self.aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_6X6_250)
         self.aruco_params = aruco.DetectorParameters()
         # prediction 
+        # had to annotate a few paper screenshots for prediction empty paper better
         self.model = keras.models.load_model("gesture_recognition_media_paper")        
-        self.CONDITIONS = ['like', 'no_gesture', 'stop', 'dislike', 'paper']
+        self.CONDITIONS = ['like', 'no_gesture', 'stop', 'dislike', 'paper'] 
         self.IMG_SIZE = 64
         self.SIZE = (self.IMG_SIZE, self.IMG_SIZE)
         self.COLOR_CHANNELS = 3
