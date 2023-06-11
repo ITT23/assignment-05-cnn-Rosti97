@@ -101,7 +101,7 @@ class GesturePredictor():
                 self.predicted_index = np.argmax(prediction)
                 #self.predicted_index = pred_label_index
 
-                #print(self.CONDITIONS[pred_label_index], np.max(prediction))
+                #print(self.CONDITIONS[self.predicted_index], np.max(prediction))
 
         else:
             # if no aruco markers are detected just show webcam image
